@@ -38,17 +38,17 @@ on Job description and the missing keywords with high accuracy
 
 # Input is
 resume:{text}
-description:{jd}
+description:{jod_description}
 
 # Outcomes
 I want the response in one single string having the structure
-{{"JD Match":"%","MissingKeywords:[]","Profile Summary":""}}
+{{"Job Description Match":"%","Missing Keywords:[]","Profile Summary":""}}
 """
 
 # Streamlit app code
-st.title("Smart ATS Resume Checker")
+st.title("Smart ATS Resume Checker AI")
 st.text("Improve Your Resume")
-jd=st.text_area("Paste the Job Description")
+jod_description=st.text_area("Paste the Job Description")
 uploaded_file=st.file_uploader("Upload Your Resume",type="pdf",help="Please upload the pdf")
 submit = st.button("Submit")
 
